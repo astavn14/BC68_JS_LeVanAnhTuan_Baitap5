@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập tính tiền</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- my css  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="group-box">
+        <div class="box-detail">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button
+                class="nav-link active"
+                id="nav-bt1-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-bt1"
+                type="button"
+                role="tab"
+                aria-controls="nav-bt1"
+                aria-selected="true"
+              >
+                <i class="fa-regular fa-folder me-2"></i>
+                Bài 1
+              </button>
+              <button
+                class="nav-link"
+                id="nav-bt2-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-bt2"
+                type="button"
+                role="tab"
+                aria-controls="nav-bt2"
+                aria-selected="false"
+              >
+                <i class="fa-regular fa-folder me-2"></i>
+                Bài 2
+              </button>
+              <button
+                class="nav-link"
+                id="nav-bt3-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-bt3"
+                type="button"
+                role="tab"
+                aria-controls="nav-bt3"
+                aria-selected="false"
+              >
+                <i class="fa-regular fa-folder me-2"></i>
+                Bài 3
+              </button>
+              <button
+                class="nav-link"
+                id="nav-bt4-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-bt4"
+                type="button"
+                role="tab"
+                aria-controls="nav-bt4"
+                aria-selected="false"
+              >
+                <i class="fa-regular fa-folder me-2"></i>
+                Bài 4
+              </button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-bt1"
+              role="tabpanel"
+              aria-labelledby="nav-bt1-tab"
+              tabindex="0"
+            >
+              <div class="box-contain">
+                <div class="head-content">
+                  <img
+                    src="./img/2824448_board_class_math_school_icon.png"
+                    alt=""
+                  />
+                  <h2>Quản lý tuyển sinh</h2>
+                </div>
+                <div class="input-luong">
+                  <div>
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="diemChuan"
+                      aria-describedby="helpId"
+                      placeholder="Điểm chuẩn"
+                    />
+                  </div>
+                  <div class="select">
+                    <select
+                      class="form-select form-select-lg dropdown"
+                      name=""
+                      id="chonKhuVuc"
+                    >
+                      <option selected>Chọn khu vực</option>
+                      <option value="2">A</option>
+                      <option value="1">B</option>
+                      <option value="0.5">C</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <select
+                      class="form-select form-select-lg dropdown"
+                      name=""
+                      id="chonDoiTuong"
+                    >
+                      <option selected>Chọn đối tượng</option>
+                      <option value="2.5">1</option>
+                      <option value="1.5">2</option>
+                      <option value="1">3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-luong">
+                  <div>
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="diemMon1"
+                      aria-describedby="helpId"
+                      placeholder="Điểm môn thứ 1"
+                    />
+                  </div>
+                  <div>
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="diemMon2"
+                      aria-describedby="helpId"
+                      placeholder="Điểm môn thứ 2"
+                    />
+                  </div>
+                  <div>
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="diemMon3"
+                      aria-describedby="helpId"
+                      placeholder="Điểm môn thứ 3"
+                    />
+                  </div>
+                </div>
+                <button class="btn button-luong mt-4" id="ketQua">
+                  Kết quả
+                </button>
+                <p class="ket-qua">
+                  <i class="fa-solid fa-right-long"></i>
+                </p>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="nav-bt2"
+              role="tabpanel"
+              aria-labelledby="nav-bt2-tab"
+              tabindex="0"
+            >
+              <div class="box-contain">
+                <div class="head-content">
+                  <img
+                    src="./img/8156554_station_electricity_power_position_icon.png"
+                    alt=""
+                  />
+                  <h2>Tính tiền điện</h2>
+                </div>
+                <div class="input-luong">
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id="hoTen"
+                      aria-describedby="helpId"
+                      placeholder="Nhập họ tên"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="KW"
+                      aria-describedby="helpId"
+                      placeholder="Nhập số KW"
+                    />
+                  </div>
+                </div>
+                <button class="btn button-luong mt-2" id="tinh">
+                  Tính tiền điện
+                </button>
+                <p class="ket-qua-2">
+                  <i class="fa-solid fa-right-long"></i>
+                </p>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="nav-bt3"
+              role="tabpanel"
+              aria-labelledby="nav-bt3-tab"
+              tabindex="0"
+            >
+              <div class="box-contain">
+                <div class="head-content">
+                  <i class="fa-solid fa-coins"></i>
+                  <h2>Tính thuế thu nhập hàng năm</h2>
+                </div>
+                <div class="input-luong">
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id="hoTen2"
+                      aria-describedby="helpId"
+                      placeholder="Nhập họ và tên"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="thuNhap"
+                      aria-describedby="helpId"
+                      placeholder="Tổng thu nhập năm"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="nguoiPhuThuoc"
+                      aria-describedby="helpId"
+                      placeholder="Số người phụ thuộc"
+                    />
+                  </div>
+                </div>
+                <button class="btn button-luong mt-2" id="tienThue">
+                  Tính tiền thuế
+                </button>
+                <p class="ket-qua-3">
+                  <i class="fa-solid fa-right-long"></i>
+                </p>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="nav-bt4"
+              role="tabpanel"
+              aria-labelledby="nav-bt4-tab"
+              tabindex="0"
+            >
+              <div class="box-contain">
+                <div class="head-content">
+                  <img src="./img/10399180_copper_wire_cable_icon.png" alt="" />
+                  <h2>Tính tiền cáp</h2>
+                </div>
+                <div class="input-luong">
+                  <div class="select mb-3">
+                    <select
+                      class="form-select form-select-lg dropdown"
+                      name=""
+                      id="chonLoaiKH"
+                      onchange="loaiKH()"
+                    >
+                      <option selected>Chọn loại khách hàng</option>
+                      <option value="nhaDan">Nhà dân</option>
+                      <option value="doanhNghiep">Doanh nghiệp</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name=""
+                      id="maKH"
+                      aria-describedby="helpId"
+                      placeholder="Nhập mã khách hàng"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label"></label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name=""
+                      id="soKenh"
+                      aria-describedby="helpId"
+                      placeholder="Số kênh cao cấp"
+                    />
+                  </div>
+                </div>
+                <div id="addOn" class="input-luong"></div>
+                <button class="btn button-luong mt-2" id="tinhTienCap">
+                  Tính tiền cáp
+                </button>
+                <p class="ket-qua-4">
+                  <i class="fa-solid fa-right-long"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
