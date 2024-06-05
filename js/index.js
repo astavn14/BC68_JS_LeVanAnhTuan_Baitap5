@@ -31,7 +31,7 @@ document.getElementById("tinh").onclick = function () {
     soTien = soKw * 500;
   } else if (soKw > 50 && soKw <= 100) {
     soTien = (soKw - 50) * 650 + 50 * 500;
-  } else if (soKw > 100 && soKw <= 150) {
+  } else if (soKw > 100 && soKw <= 200) {
     soTien = (soKw - 100) * 850 + 50 * 500 + 50 * 650;
   } else {
     soTien = (soKw - 150) * 1300 + 50 * 500 + 50 * 650 + 50 * 850;
