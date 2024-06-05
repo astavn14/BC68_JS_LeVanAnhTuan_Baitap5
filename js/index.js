@@ -33,8 +33,10 @@ document.getElementById("tinh").onclick = function () {
     soTien = (soKw - 50) * 650 + 50 * 500;
   } else if (soKw > 100 && soKw <= 200) {
     soTien = (soKw - 100) * 850 + 50 * 500 + 50 * 650;
+  } else if (soKw > 200 && soKw <= 350) {
+    soTien = (soKw - 200) * 1100 + 50 * 500 + 50 * 650 + 100 * 850;
   } else {
-    soTien = (soKw - 200) * 1300 + 50 * 500 + 50 * 650 + 50 * 850;
+    soTien = (soKw - 350) * 1300 + 150 * 1100 + 50 * 500 + 50 * 650 + 100 * 850;
   }
   soTien = soTien.toLocaleString("vi", { currency: "VND", style: "currency" });
   document.querySelector(
@@ -48,26 +50,25 @@ document.getElementById("tienThue").onclick = function () {
   let phuThuoc = document.getElementById("nguoiPhuThuoc").value * 1;
   let tongThuNhap = 0;
   let thuNhapChiuThue = 0;
-  if (thuNhap <= 60000000) {
-    tongThuNhap = (thuNhap * 5) / 100;
-  } else if (thuNhap > 60000000 && thuNhap <= 120000000) {
-    tongThuNhap = (thuNhap * 10) / 100;
-  } else if (thuNhap > 120000000 && thuNhap <= 210000000) {
-    tongThuNhap = (thuNhap * 15) / 100;
-  } else if (thuNhap > 210000000 && thuNhap <= 384000000) {
-    tongThuNhap = (thuNhap * 20) / 100;
-  } else if (thuNhap > 384000000 && thuNhap <= 624000000) {
-    tongThuNhap = (thuNhap * 25) / 100;
-  } else if (thuNhap > 624000000 && thuNhap <= 960000000) {
-    tongThuNhap = (thuNhap * 30) / 100;
+  thuNhapChiuThue = thuNhap - 4000000 - phuThuoc * 1600000;
+  if (thuNhapChiuThue <= 60000000) {
+    tongThuNhap = thuNhapChiuThue * 0.05;
+  } else if (thuNhapChiuThue > 60000000 && thuNhapChiuThue <= 120000000) {
+    tongThuNhap = thuNhapChiuThue * 0.1;
+  } else if (thuNhapChiuThue > 120000000 && thuNhapChiuThue <= 210000000) {
+    tongThuNhap = thuNhapChiuThue * 0.15;
+  } else if (thuNhapChiuThue > 210000000 && thuNhapChiuThue <= 384000000) {
+    tongThuNhap = thuNhapChiuThue * 0.2;
+  } else if (thuNhapChiuThue > 384000000 && thuNhapChiuThue <= 624000000) {
+    tongThuNhap = thuNhapChiuThue * 0.25;
+  } else if (thuNhapChiuThue > 624000000 && thuNhapChiuThue <= 960000000) {
+    tongThuNhap = thuNhapChiuThue * 0.3;
   } else {
-    tongThuNhap = (thuNhap * 35) / 100;
+    tongThuNhap = thuNhapChiuThue * 0.35;
   }
-
-  thuNhapChiuThue = tongThuNhap - 4000000 - phuThuoc * 1600000;
   document.querySelector(
     ".ket-qua-3"
-  ).innerHTML = `<i class="fa-solid fa-right-long"></i> Họ và tên: ${hoTen}, Tiền thuế thu nhập cá nhân: ${thuNhapChiuThue.toLocaleString(
+  ).innerHTML = `<i class="fa-solid fa-right-long"></i> Họ và tên: ${hoTen}, Tiền thuế thu nhập cá nhân: ${tongThuNhap.toLocaleString(
     "vi",
     { currency: "VND", style: "currency" }
   )}`;
@@ -98,7 +99,7 @@ document.getElementById("tinhTienCap").onclick = function () {
   let hoTen = document.getElementById("maKH").value;
   let soKenh = document.getElementById("soKenh").value * 1;
   let khachHang = document.getElementById("chonLoaiKH").value;
-
+  let soKetNoi = document.getElementById("soKetNoi").value * 1;
   let tienMang = 0;
   if (khachHang == "nhaDan") {
     tienMang = 4.5 + 20.5 + 7.5 * soKenh;
@@ -106,7 +107,6 @@ document.getElementById("tinhTienCap").onclick = function () {
     if (soKetNoi <= 10) {
       tienMang = 15 + 75 + 50 * soKenh;
     } else {
-      let soKetNoi = document.getElementById("soKetNoi").value * 1;
       tienMang = 15 + 75 + 5 * soKetNoi + 50 * soKenh;
     }
   }
