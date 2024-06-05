@@ -34,7 +34,7 @@ document.getElementById("tinh").onclick = function () {
   } else if (soKw > 100 && soKw <= 200) {
     soTien = (soKw - 100) * 850 + 50 * 500 + 50 * 650;
   } else {
-    soTien = (soKw - 150) * 1300 + 50 * 500 + 50 * 650 + 50 * 850;
+    soTien = (soKw - 200) * 1300 + 50 * 500 + 50 * 650 + 50 * 850;
   }
   soTien = soTien.toLocaleString("vi", { currency: "VND", style: "currency" });
   document.querySelector(
